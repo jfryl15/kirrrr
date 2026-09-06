@@ -1,0 +1,14 @@
+services:
+  hpxpanel:
+    image: ghcr.io/pooyahpx/hpxpanel:latest
+    restart: always
+    env_file: .env
+    network_mode: host
+    volumes:
+      - /var/lib/hpxpanel:/var/lib/hpxpanel
+    healthcheck:
+      test: ["CMD", "/code/healthcheck.sh"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 90s

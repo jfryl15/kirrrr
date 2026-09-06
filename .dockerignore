@@ -1,0 +1,52 @@
+**/node_modules
+*.log
+*.md
+*.pyc
+*.pyd
+*.pyo
+.docker*
+.env*
+.git*
+.idea
+.vscode
+Dockerfile*
+__pycache__
+db.sqlite3
+db.sqlite3-journal
+docker-compose*.yml
+v2ray-core
+xray-core
+tests
+venv*
+.venv*
+LICENSE
+install_service.sh
+hpxpanel.code-workspace
+scripts/*
+!scripts/hpx-pulse-agent.sh
+!scripts/hpx-tunnel-engine-install.sh
+!scripts/hpx-tunnel-engine.version
+
+# Dev tooling / CI (not used at runtime)
+Makefile
+.github
+.pre-commit-config.yaml
+.editorconfig
+
+# Caches and local artifacts
+.pytest_cache
+.ruff_cache
+.uv-cache
+.mypy_cache
+
+# Tests config and local databases
+pytest.ini
+test.db
+*.db-journal
+
+# AI / planning scratch output
+.AGENT
+graphify-out
+
+# Dashboard source is required because the Railway Dockerfile builds it in a dedicated stage.
+# Keep dependency caches out of the context.
